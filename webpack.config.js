@@ -43,8 +43,16 @@ module.exports = {
 				loader: 'html'
 			},
 			{
+				/*处理模板*/
 				test: /\.(tpl|ejs)$/,
 				loader: 'ejs'
+			},
+			{
+				test: //i,
+				loaders: [
+					'url?limit=8000&name=assets/[name]-[hash:5].[ext]',
+					'image-webpack'//压缩图片
+				]
 			}
 		]
 	},
